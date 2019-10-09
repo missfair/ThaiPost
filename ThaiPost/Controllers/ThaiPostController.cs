@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ThaiPost.Models;
 using ThaiPost.Services;
+using ThaiPost.Validation;
 using static ThaiPost.Models.HookData;
 
 namespace ThaiPost.Controllers
@@ -28,6 +29,7 @@ namespace ThaiPost.Controllers
         [HttpPost("api/thai-post/hook-data")]
         public void PostHookData(HookDataRequest request)
         {
+            Request.CheckAuthorization();
             //เอา URL : api/thai-post/hook-data นี้ไปใส่ใน หน้า dashboard ของ https://track.thailandpost.co.th/dashboard# เวลาเค้ายิงกลับมาจะได้เข้า path นี้
             //เวลาสถานะวัสดุเปลี่ยนเค้าจะยิง request นี่มาบอกสถานะ
         }
