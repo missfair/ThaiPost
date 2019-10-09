@@ -18,11 +18,11 @@ namespace ThaiPost.Models
             public string status_date { get; set; }
             public string location { get; set; }
             public string postcode { get; set; }
-            public object delivery_status { get; set; }
-            public object delivery_description { get; set; }
-            public object delivery_datetime { get; set; }
-            public object receiver_name { get; set; }
-            public object signature { get; set; }
+            public int? delivery_status { get; set; }
+            public int? delivery_description { get; set; }
+            public int? delivery_datetime { get; set; }
+            public int? receiver_name { get; set; }
+            public int? signature { get; set; }
         }
 
 
