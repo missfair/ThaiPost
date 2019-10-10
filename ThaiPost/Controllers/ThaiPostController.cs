@@ -20,7 +20,7 @@ namespace ThaiPost.Controllers
         }
 
         [HttpPost("api/thai-post/hook-track")]
-        public HooktrackResponse PostHooktrack(HooktrackRequest request)
+        public HooktrackResponse PostHooktrack([FromBody]HooktrackRequest request)
         {
             var response = new ThaiPostServices().PostHookTrack(request);
             return response;
